@@ -1,5 +1,5 @@
-// app/page.tsx
-import AICard from '../components/aiCard'; // Importación desde la raíz
+import AICard from "@/components/ui/AICard";
+import { AIS } from "@/lib/ai-data";
 
 export default function Home() {
   return (
@@ -7,23 +7,18 @@ export default function Home() {
       <h1 className="text-4xl font-bold mb-12">AI Periodic Table</h1>
       
       <div className="flex gap-4">
-        <AICard 
-          symbol="GPT" 
-          name="ChatGPT" 
-          category="LLM" 
-          logo="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
-          borderColor="border-emerald-500"
-          glowColor="hover:shadow-emerald-500/40"
-        />
-        
-        <AICard 
-          symbol="Cl" 
-          name="Claude" 
-          category="NLP" 
-          logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Anthropic_logo.svg/200px-Anthropic_logo.svg.png"
-          borderColor="border-orange-400"
-          glowColor="hover:shadow-orange-400/40"
-        />
+        {AIS.map((ai) => (
+          <AICard
+            key={ai.id}
+            id={ai.id}
+            symbol={ai.symbol}
+            name={ai.name}
+            category={ai.category}
+            logo={ai.logo}
+            borderColor={ai.borderColor}
+            glowColor={ai.glowColor}
+          />
+        ))}
       </div>
     </main>
   );
