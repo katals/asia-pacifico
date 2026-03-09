@@ -9,23 +9,33 @@ interface AICardProps {
   logo: string;
   borderColor: string;
   glowColor: string;
+  style?: React.CSSProperties;
 }
 
-export default function AICard({ id, symbol, name, category, logo, borderColor, glowColor }: AICardProps) {
+export default function AICard({
+  id,
+  symbol,
+  name,
+  category,
+  logo,
+  borderColor,
+  glowColor,
+  style,
+}: AICardProps) {
   return (
-    <Link href={`/ai/${id}`}>
+    <Link href={`/ai/${id}`} style={style} className="block w-20 h-24">
       <div
         className={`
-        relative group w-20 h-24 flex flex-col items-center justify-between p-2
+        relative group w-full h-full flex flex-col items-center justify-between p-2
         bg-slate-900/40 backdrop-blur-md border ${borderColor} rounded-md
-        transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]
+        transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:z-50
         ${glowColor} cursor-pointer
       `}
       >
-        <span className="absolute top-1 right-1 text-[8px] font-bold opacity-70 uppercase">
+        <span className="absolute top-1 right-1 text-[8px] font-bold opacity-70 uppercase truncate max-w-[90%]">
           {category}
         </span>
-        <div className="relative w-6 h-6 mt-2">
+        <div className="relative w-6 h-6 mt-3">
           <Image
             src={logo}
             alt={name}
@@ -35,7 +45,9 @@ export default function AICard({ id, symbol, name, category, logo, borderColor, 
           />
         </div>
         <span className="text-xl font-black leading-none">{symbol}</span>
-        <span className="text-[9px] font-medium truncate w-full text-center pb-1">{name}</span>
+        <span className="text-[9px] font-medium truncate w-full text-center pb-1">
+          {name}
+        </span>
       </div>
     </Link>
   );
