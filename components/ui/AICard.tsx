@@ -27,7 +27,7 @@ export default function AICard({
       <div
         className={`
         relative group w-full h-full flex flex-col items-center justify-between p-2
-        bg-slate-900/40 backdrop-blur-md border ${borderColor} rounded-md
+        bg-card/80 backdrop-blur-md border ${borderColor} rounded-md
         transition-all duration-300 hover:scale-110 hover:shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:z-50
         ${glowColor} cursor-pointer
       `}

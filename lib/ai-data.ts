@@ -30,7 +30,7 @@ export const AIS: AIItem[] = [
     symbol: "Cl",
     name: "Claude",
     category: "NLP",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Anthropic_logo.svg/200px-Anthropic_logo.svg.png",
+    logo: "https://ui-avatars.com/api/?name=Claude&background=fb923c&color=000",
     borderColor: "border-orange-400",
     glowColor: "hover:shadow-orange-400/40",
     description: "Modelo de Anthropic enfocado en razonamiento.",
