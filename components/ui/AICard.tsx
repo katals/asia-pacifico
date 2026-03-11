@@ -1,14 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { AICategoryMap, AICategory } from "@/lib/category-data";
 
 interface AICardProps {
   id: string;
   symbol: string;
   name: string;
-  category: string;
+  category: AICategory;
   logo: string;
-  borderColor: string;
-  glowColor: string;
   style?: React.CSSProperties;
 }
 
@@ -18,10 +17,10 @@ export default function AICard({
   name,
   category,
   logo,
-  borderColor,
-  glowColor,
   style,
 }: AICardProps) {
+  const { borderColor, glowColor } = AICategoryMap[category];
+
   return (
     <Link href={`/ai/${id}`} style={style} className="block w-20 h-24">
       <div

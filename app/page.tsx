@@ -1,5 +1,7 @@
 import AICard from "@/components/ui/AICard";
+import LegendItem from "@/components/features/mainpage/LegendItem";
 import { AIS } from "@/lib/ai-data";
+import { AICategoryMap } from "@/lib/category-data";
 
 export default function Home() {
   return (
@@ -31,8 +33,6 @@ export default function Home() {
               name={ai.name}
               category={ai.category}
               logo={ai.logo}
-              borderColor={ai.borderColor}
-              glowColor={ai.glowColor}
               style={{
                 gridColumn: ai.col,
                 gridRow: ai.row,
@@ -40,6 +40,15 @@ export default function Home() {
             />
           ))}
         </div>
+      </div>
+
+      <div className="w-full max-w-3xl flex flex-col gap-6 mt-4 px-4 pb-12">
+        <h3 className="text-2xl font-bold tracking-tight text-foreground mb-2">
+          Descripción tabla periódica
+        </h3>
+        {Object.values(AICategoryMap).map((item, i) => (
+          <LegendItem key={i} colorClass={item.colorClass} label={item.label} />
+        ))}
       </div>
     </main>
   );
