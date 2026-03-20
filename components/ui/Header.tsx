@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+        <Link href="/" className="text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
           AI Table
         </Link>
         
