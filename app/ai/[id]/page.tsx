@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { AIS, getAIById } from "@/lib/ai-data";
+import { AICategoryMap } from "@/lib/category-data";
 
 interface AIPageProps {
   params: Promise<{ id: string }>;
@@ -21,7 +22,7 @@ export default async function DetailsAiPage({ params }: AIPageProps) {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-background px-6 py-16 text-foreground">
-      <div className={`w-full max-w-2xl rounded-xl border ${ai.borderColor} bg-card p-8`}>
+      <div className={`w-full max-w-2xl rounded-xl border ${AICategoryMap[ai.category].borderColor} bg-card p-8`}>
         <p className="text-sm uppercase tracking-widest opacity-70">{ai.category}</p>
         <div className="mt-4 flex items-center gap-4">
           <div className="relative h-12 w-12">
