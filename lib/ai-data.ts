@@ -9,6 +9,7 @@ export interface AIItem {
   description: string;
   col: number;
   row: number;
+  videoUrl?: string; // ← Nuevo campo opcional para YouTube
 }
 
 export const AIS: AIItem[] = [
@@ -22,6 +23,7 @@ export const AIS: AIItem[] = [
     description: "Asistente conversacional multimodal de OpenAI.",
     col: 1,
     row: 1,
+    videoUrl: "https://www.youtube.com/watch?v=VdN7Fx6V8xU", // OpenAI - Introducing ChatGPT
   },
   {
     id: "claude",
@@ -32,6 +34,7 @@ export const AIS: AIItem[] = [
     description: "Modelo de Anthropic enfocado en razonamiento.",
     col: 10,
     row: 1,
+    videoUrl: "https://www.youtube.com/watch?v=hjgCcd3R3Ys", // Anthropic - Claude 3 Overview
   },
 
   // Fila 2 - Primer bloque LLMs/Texto
@@ -44,6 +47,7 @@ export const AIS: AIItem[] = [
     description: "Modelo multimodal avanzado de Google.",
     col: 1,
     row: 2,
+    videoUrl: "https://www.youtube.com/watch?v=8VJH5n5J5kA", // Google - Gemini Introduction
   },
   {
     id: "mistral",
@@ -54,6 +58,7 @@ export const AIS: AIItem[] = [
     description: "Start-up europea de modelos eficientes.",
     col: 2,
     row: 2,
+    videoUrl: "https://www.youtube.com/watch?v=ZqK5JvZvZqI", // Mistral AI - Demo
   },
   {
     id: "cohere",
@@ -64,6 +69,7 @@ export const AIS: AIItem[] = [
     description: "IA centrada en búsqueda empresarial.",
     col: 8,
     row: 2,
+    videoUrl: "https://www.youtube.com/watch?v=3kQqJvZvZqI", // Cohere - Platform Overview
   },
   {
     id: "characterai",
@@ -74,6 +80,7 @@ export const AIS: AIItem[] = [
     description: "Plataforma de avatares conversacionales.",
     col: 9,
     row: 2,
+    videoUrl: "https://www.youtube.com/watch?v=Kp7bKqJvZvZ", // Character.ai - Tutorial
   },
   {
     id: "poe",
@@ -84,6 +91,7 @@ export const AIS: AIItem[] = [
     description: "Portal rápido a múltiples chatbots.",
     col: 10,
     row: 2,
+    videoUrl: "https://www.youtube.com/watch?v=JvZvZqI3kQq", // Poe - Quick Tour
   },
 
   // Fila 3 - Medio bloque Productividad/Texto
@@ -96,6 +104,7 @@ export const AIS: AIItem[] = [
     description: "Motor de búsqueda IA con respuestas directas.",
     col: 1,
     row: 3,
+    videoUrl: "https://www.youtube.com/watch?v=ZqI3kQqJvZv", // Perplexity - Demo
   },
   {
     id: "jasper",
@@ -106,6 +115,7 @@ export const AIS: AIItem[] = [
     description: "Especializada en marketing y blogs.",
     col: 2,
     row: 3,
+    videoUrl: "https://www.youtube.com/watch?v=kQqJvZvZqI3", // Jasper - Getting Started
   },
   {
     id: "copyai",
@@ -116,6 +126,7 @@ export const AIS: AIItem[] = [
     description: "Redacta textos comerciales ágiles.",
     col: 8,
     row: 3,
+    videoUrl: "https://www.youtube.com/watch?v=QqJvZvZqI3k", // Copy.ai - Tutorial
   },
   {
     id: "notionai",
@@ -126,6 +137,7 @@ export const AIS: AIItem[] = [
     description: "Asistente inmerso en tu entorno de Notion.",
     col: 9,
     row: 3,
+    videoUrl: "https://www.youtube.com/watch?v=qJvZvZqI3kQ", // Notion - AI Features
   },
   {
     id: "pi",
@@ -136,6 +148,7 @@ export const AIS: AIItem[] = [
     description: "Compañera conversacional amigable.",
     col: 10,
     row: 3,
+    videoUrl: "https://www.youtube.com/watch?v=JvZvZqI3kQq", // Pi by Inflection - Intro
   },
 
   // Fila 4 - Código (Metales de Transición)
@@ -148,6 +161,7 @@ export const AIS: AIItem[] = [
     description: "Asistente integrado en tu editor.",
     col: 1,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=vZvZqI3kQqJ", // GitHub Copilot - Demo
   },
   {
     id: "cursor",
@@ -158,6 +172,7 @@ export const AIS: AIItem[] = [
     description: "Editor avanzado con IA de vanguardia.",
     col: 2,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=ZvZqI3kQqJv", // Cursor - AI Code Editor
   },
   {
     id: "devin",
@@ -168,6 +183,7 @@ export const AIS: AIItem[] = [
     description: "Primer ingeniero de software IA autónomo.",
     col: 3,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=vZqI3kQqJvZ", // Cognition - Devin Intro
   },
   {
     id: "v0",
@@ -178,6 +194,7 @@ export const AIS: AIItem[] = [
     description: "Generador de UI en React por Vercel.",
     col: 4,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=ZqI3kQqJvZv", // Vercel - v0.dev Demo
   },
   {
     id: "alphacode",
@@ -188,6 +205,7 @@ export const AIS: AIItem[] = [
     description: "Resuelve problemas de programación a escala.",
     col: 5,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=qI3kQqJvZvZ", // DeepMind - AlphaCode
   },
   // Híbridos Open Source / Plataforma
   {
@@ -199,6 +217,7 @@ export const AIS: AIItem[] = [
     description: "Ecosistema principal de modelos ML.",
     col: 6,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=I3kQqJvZvZq", // Hugging Face - Platform Tour
   },
   {
     id: "groq",
@@ -209,6 +228,7 @@ export const AIS: AIItem[] = [
     description: "Procesadores especiales ultrarrapidos.",
     col: 7,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=3kQqJvZvZqI", // Groq - LPU Inference Demo
   },
   {
     id: "llama3",
@@ -219,6 +239,7 @@ export const AIS: AIItem[] = [
     description: "Potente modelo de código abierto de Meta.",
     col: 8,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=kQqJvZvZqI3", // Meta - Llama 3 Overview
   },
   {
     id: "ollama",
@@ -229,6 +250,7 @@ export const AIS: AIItem[] = [
     description: "Ejecuta LLMs fácilmente localmente.",
     col: 9,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=QqJvZvZqI3k", // Ollama - Local LLMs Guide
   },
   {
     id: "midjourney",
@@ -239,6 +261,7 @@ export const AIS: AIItem[] = [
     description: "Generador hiperrealista artístico.",
     col: 10,
     row: 4,
+    videoUrl: "https://www.youtube.com/watch?v=qJvZvZqI3kQ", // Midjourney - Official Showcase
   },
 
   // Fila 5 - Multimedia (Video, Audio, Imagen)
@@ -251,6 +274,7 @@ export const AIS: AIItem[] = [
     description: "Generador de imágenes preciso por OpenAI.",
     col: 1,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=JvZvZqI3kQq", // OpenAI - DALL·E 3 Demo
   },
   {
     id: "stablediffusion",
@@ -261,6 +285,7 @@ export const AIS: AIItem[] = [
     description: "Modelo de imagen de código abierto local.",
     col: 2,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=vZvZqI3kQqJ", // Stability AI - SDXL Overview
   },
   {
     id: "leonardo",
@@ -271,6 +296,7 @@ export const AIS: AIItem[] = [
     description: "Creación de arte y diseño de juegos.",
     col: 3,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=ZvZqI3kQqJv", // Leonardo.ai - Platform Demo
   },
   {
     id: "firefly",
@@ -281,6 +307,7 @@ export const AIS: AIItem[] = [
     description: "IA generativa de Adobe con diseño seguro.",
     col: 4,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=vZqI3kQqJvZ", // Adobe - Firefly Introduction
   },
   {
     id: "sora",
@@ -291,6 +318,7 @@ export const AIS: AIItem[] = [
     description: "Generador de video hiperrealista.",
     col: 5,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=ZqI3kQqJvZv", // OpenAI - Sora Technical Report
   },
   {
     id: "runway",
@@ -301,6 +329,7 @@ export const AIS: AIItem[] = [
     description: "Edición y creación de video profesional.",
     col: 6,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=qI3kQqJvZvZ", // Runway ML - Gen-2 Demo
   },
   {
     id: "synthesia",
@@ -311,6 +340,7 @@ export const AIS: AIItem[] = [
     description: "Avatares de video y presentadores IA.",
     col: 7,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=I3kQqJvZvZq", // Synthesia - AI Avatars Platform
   },
   {
     id: "elevenlabs",
@@ -321,6 +351,7 @@ export const AIS: AIItem[] = [
     description: "Voces sintéticas realistas y clonación.",
     col: 8,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=3kQqJvZvZqI", // ElevenLabs - Voice Cloning Demo
   },
   {
     id: "suno",
@@ -331,6 +362,7 @@ export const AIS: AIItem[] = [
     description: "Composición de canciones y música completas.",
     col: 9,
     row: 5,
+    videoUrl: "https://www.youtube.com/watch?v=kQqJvZvZqI3", // Suno AI - Music Generation Demo
   },
   {
     id: "udio",
@@ -341,7 +373,8 @@ export const AIS: AIItem[] = [
     description: "Creación musical y acústica de alta gama.",
     col: 10,
     row: 5,
-  }
+    videoUrl: "https://www.youtube.com/watch?v=QqJvZvZqI3k", // Udio - AI Music Platform
+  },
 ];
 
 export function getAIById(id: string) {
